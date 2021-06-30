@@ -12,26 +12,25 @@ Module basiccalculatorModule
             Console.WriteLine("1 - Power")
             Console.WriteLine("2 - Square Root")
             fourresposnse = Console.ReadLine()
-        End If
-        If fourresposnse = 1 Then
-            Console.Clear()
-            Console.WriteLine("What number are you looking to get the power for?")
-            number = Console.ReadLine
-            Console.Clear()
-            Console.WriteLine("What number are you going to put it to the power of?")
-            exponent = Console.ReadLine
-            result = Math.Exp(number ^ exponent)
-            Console.WriteLine("The number " + pownumber + "to the power of " + exponent + " is: " + result)
-        End If
-        If fourresposnse = 2 Then
-            Console.Clear()
-            Console.WriteLine("What number are you looking to get the sqaure root for?")
-            rootrepo = Console.ReadLine
-            Console.Clear()
-            rootresult = Math.Sqrt(rootrepo)
-            Console.WriteLine("The square root of " + rootrepo + " is " + rootresult)
-        End If
-        If response = 1 Then
+            
+            If fourresposnse = 1 Then
+                Console.Clear()
+                Console.WriteLine("What number are you looking to get the power for?")
+                number = Console.ReadLine
+                Console.Clear()
+                Console.WriteLine("What number are you going to put it to the power of?")
+                exponent = Console.ReadLine
+                result = Math.Exp(number ^ exponent)
+                Console.WriteLine("The number " + pownumber + "to the power of " + exponent + " is: " + result)
+            ElseIf fourresposnse = 2 Then
+                Console.Clear()
+                Console.WriteLine("What number are you looking to get the sqaure root for?")
+                rootrepo = Console.ReadLine
+                Console.Clear()
+                rootresult = Math.Sqrt(rootrepo)
+                Console.WriteLine("The square root of " + rootrepo + " is " + rootresult)
+            End If
+        ElseIf response = 1 Then
             Console.Clear()
 
             Console.WriteLine("What is the first number you want to work with?")
@@ -59,9 +58,7 @@ Module basiccalculatorModule
                 num3 = firstnumber / secondnumber
             End If
             Console.WriteLine("Your number is: " + num3)
-        End If
-
-        If response = 2 Then
+        ElseIf response = 2 Then
             Console.Clear()
             Console.WriteLine("1 - Gives cosine of an angle")
             Console.WriteLine("2 - Gives sine of an angle")
