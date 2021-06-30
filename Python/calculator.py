@@ -1,22 +1,9 @@
-print('Please separate all numbers and operators with a space')
-print('I.e. `8 + 2` not `8+2`')
-print('Possible operators: +, -, *, /, %, //')
-
 while True:
     expression = input('Expression: ')
 
-    expression = expression.split(' ')
+    for char in expression: # Looks through every char in expression without splitting
+        if char not in '1234567890+-*//%': # There is no single `/` because `//` is an operator in Python
+        # and using `/` and `//` separately would be a waste since `/` is already in `//`
+            continue
 
-    if expression[1] == '+':
-        print(str(float(expression[0]) + float(expression[2])))
-    elif expression[1] == '-':
-        print(str(float(expression[0]) - float(expression[2])))
-    elif expression[1] == '*':
-        print(str(float(expression[0]) * float(expression[2])))
-    elif expression[1] == '/':
-        print(str(float(expression[0]) / float(expression[2])))
-    elif expression[1] == '%':
-            print(str(float(expression[0]) % float(expression[2])))
-    elif expression[1] == '//':
-            print(str(float(expression[0]) // float(expression[2])))
-        
+    print(eval(expression))
