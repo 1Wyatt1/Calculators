@@ -5,7 +5,7 @@ while True:
         exit()
 
     for char in expression: # Looks through every char in expression without splitting
-        if char not in '1234567890+-*//%': # There is no single `/` because `//` is an operator in Python
+        if not char in '1234567890+-*/%': # There is no single `/` because `//` is an operator in Python
         # and using `/` and `//` separately would be a waste since `/` is already in `//`
             continue
 
