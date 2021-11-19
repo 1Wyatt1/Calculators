@@ -15,19 +15,19 @@ namespace Calculators
             switch (operation)
             {
                 case "+":
-                    Console.WriteLine(num3 + num4);
+                    Console.WriteLine(num1 + num2);
                     break;
                 case "-":
-                    Console.WriteLine(num3 - num4);
+                    Console.WriteLine(num1 - num2);
                     break;
                 case "*":
-                    Console.WriteLine(num3 * num4);
+                    Console.WriteLine(num1 * num2);
                     break;
                 case "/":
-                    Console.WriteLine(num3 / num4);
+                    Console.WriteLine(num1 / num2);
                     break;
                 case "%":
-                    Console.WriteLine(num3 % num4);
+                    Console.WriteLine(num1 % num2);
                 default:
                     Console.WriteLine("Unrecognized Operation {}", operation);
                     break;
